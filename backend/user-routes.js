@@ -8,8 +8,8 @@ var app = module.exports = express.Router();
 // XXX: This should be a database of users :).
 var users = [{
   id: 1,
-  username: 'gonto',
-  password: 'gonto',
+  username: 'root',
+  password: 'root',
   scope: 'full_access'
 }];
 
@@ -23,7 +23,7 @@ function createAccessToken() {
     aud: config.audience,
     exp: Math.floor(Date.now() / 1000) + (60 * 60),
     scope: 'full_access',
-    sub: "lalaland|gonto",
+    sub: "lalaland|root",
     jti: genJti(), // unique identifier for the token
     alg: 'HS256'
   }, config.secret);

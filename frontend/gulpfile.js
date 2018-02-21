@@ -7,7 +7,6 @@ var gulp = require('gulp');
 var path = require('path');
 var mkdirp = require('mkdirp');
 var browserify = require('browserify');
-// var watchify = require('watchify');
 var source = require('vinyl-source-stream');
 var stringify = require('stringify');
 var rework = require('rework');
@@ -39,7 +38,6 @@ function browserifyTask(env) {
       browserified.transform({ global: true }, 'uglifyify');
     }
     if (env === 'dev') {
-      //  browserified = watchify(browserified);
       browserified.on('update', function () {
         bundle(browserified, env);
       });

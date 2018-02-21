@@ -14,9 +14,7 @@ var jwtCheck = jwt({
 
 // Check for scope
 function requireScope(scope) {
-  console.log('required');
   return function (req, res, next) {
-    console.log(req.user);
     var has_scopes = req.user.scope === scope;
     if (!has_scopes) {
       res.sendStatus(401);

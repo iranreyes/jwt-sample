@@ -1,5 +1,5 @@
 {
-  "secret": "ngEurope rocks!",
+  "secret": "This will be a secret!",
   "audience": "nodejs-jwt-auth",
-  "issuer": "https://gonto.com"
+  "issuer": "https://sample.com"
 }
